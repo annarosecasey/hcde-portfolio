@@ -2,19 +2,28 @@
 // 1.27.17
 // Assignment 2 - Lego family
 // "The Incredibles"
-// Characters will move from the center to the
-// middle of the screen and stop
+// Characters will move from the edges of the screen
+// to the middle of the screen and stop
 
 // These variables set the starting point for each of the 
 // character functions and make it possible for them to move
+// Variables for Jack-Jack
 var d = 0;
 var e = 0;
+
+// Variables for Helen
 var f = 75;
 var g = 0;
+
+// Variables for Bob
 var h = 0;
 var i = 305;
+
+// Variables for Dash
 var j = 650;
 var k = 0;
+
+// Variables for Violet
 var l = 655;
 var m = 400;
 
@@ -32,19 +41,28 @@ function draw() {
   dash(j, k, 50); // This runs the code under the function for Dash
   violet(l, m, 45); // This runs the code under the function for Violet
   
-// These define the min or max values for the variables that allow the characters to move  
+  // These definitions allow movement for Jack-Jack
   d = min(d + .5, 185);
   e = min(e + 1, 465);
+  
+  //Movement for Helen
   f = min(f + .5, 260);
   g = min(g + .5, 255);
+  
+  //Movement for Bob
   h = min(h + 1.5, 350);
   i = max(i - .5, 180);
+  
+  //Movement for Dash
   j = max(j - 1, 495);
   k = min(k + 1, 325);
+  
+  //Movement for Violet
   l = max(l - .5, 570);
   m = max(m - .5, 275);
 }
 
+// This code builds Jack-Jack by stacking rectangles of various colors and heights
 function jack(a, b, c) {
   // red suit
   fill (255, 0 , 0);
@@ -57,11 +75,10 @@ function jack(a, b, c) {
   rect (a, b + 25, c, c - 42);
   // red hair
   fill (249, 145, 62);
-  rect (a + 15, b, c - 30, c - 40);
-  
+  rect (a + 15, b, c - 30, c - 40); 
 }
 
-
+// This code builds Helen by stacking rectangles of various colors and heights - Logo is made with ellipses and rectangle
 function helen(a, b, c) {
   // black boots
   fill (0);
@@ -90,10 +107,10 @@ function helen(a, b, c) {
   // brown hair
   fill (142, 70, 15);
   rect (a, b, c, c - 25);
-  
 }
 
 
+// This code builds Bob by stacking rectangles of various colors and heights - Logo is made with ellipses and rectangle
 function bob(a, b, c) {
   fill (0);
   rect (a, b + 325, c, c - 50);
@@ -124,6 +141,7 @@ function bob(a, b, c) {
 }
 
 
+// This code builds Dash by stacking rectangles of various colors and heights - Logo is made with ellipses and rectangle
 function dash(a, b, c) {
   // black boots
   fill (0);
@@ -155,6 +173,7 @@ function dash(a, b, c) {
 }
 
 
+// This code builds Violet by stacking rectangles of various colors and heights - Logo is made with ellipses and rectangle
 function violet(a, b, c) {
   // black boots
   fill (0);
