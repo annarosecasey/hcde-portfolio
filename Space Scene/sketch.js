@@ -28,6 +28,9 @@ function setup() {
 
 function draw() {
   background(0); // Background is black like space
+  textSize(12); // Sets text size to 12
+  fill(255); // text color is white
+  text("hold mouse to play", 550, 25); // Display text and location
   image(earth, 600, 400, 300, 300 * aspectRatioEarth); // This calls the earth image and puts it in the center of the canvas
   image(astro, x, y, 200, 200 * aspectRatioAstro); // This calls the astronaut and sets him in the lower left corner
   if (mouseIsPressed) { // This sets up for actions when the mouse is pressed
