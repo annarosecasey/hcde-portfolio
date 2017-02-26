@@ -1,5 +1,5 @@
 // Created by Anna Casey
-// Last edited 2/3/17
+// Last edited 2/4/17
 // This robot has moving eyes and jumps up and down
 
 var page = 0
@@ -22,31 +22,30 @@ function draw() {
   if (page == 0) {
     jumpVal = 400 //This resets its position back to start
     // This section of code makes him go cross-eyed when mouse position X is between 184 & 229
-    if (188 < mouseX && 224 > mouseX ) { 
+    if (184 < mouseX && 229 > mouseX && mouseY > 195 && 205 > mouseY) { 
       fill(104, 237, 228);
       ellipse(160, jumpVal - 200, 50);
       ellipse(240, jumpVal - 200, 30);
       fill(90);
       ellipse(170, jumpVal - 200, 25);
       ellipse(230, jumpVal - 200, 10);
-    } else if (134 > mouseX) { // This section makes it look left when the mouse position X is < 134
-      eyeDirection = -10
-    } else if (255 < mouseX) { // This section makes it look right when the mouse position X is > 255
-      eyeDirection = 10
+    } else if (175 > mouseX) { // This section makes it look left when the mouse position X is < 134
+      eyeDirection = max(-10, eyeDirection - 1)
+    } else if (225 < mouseX) { // This section makes it look right when the mouse position X is > 255
+      eyeDirection = min(10, eyeDirection + 1)
     }
-    // This makes the robot jump up and down after the mouse is clicked and every other click that proceeds
+  // This makes the robot jump up and down after the mouse is clicked and every other click that proceeds
   } else {
     jumpVal = jumpDir + jumpVal;
     if (jumpVal > 400 || jumpVal < 280) {
     jumpDir = jumpDir * -1
     }
   }
-  
 }
 
 // This allows the switch between eyes moving back and forth and jumping up and down
 function mousePressed () {
-    page = 1 - page
+  page = 1 - page
  }
  
 // Brings all the parts of the robot together into one function
