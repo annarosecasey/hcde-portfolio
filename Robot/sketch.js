@@ -8,7 +8,7 @@ var jumpVal = 400
 var jumpDir = 2
 
 function setup() {
-  createCanvas(400,800);// Sets canvas size
+  createCanvas(700,800);// Sets canvas size
   rectMode(CENTER);// Places coordinates for rectangles at the center rather than corner
 }
 
@@ -17,21 +17,21 @@ function draw() {
   background(104, 237, 228);// The background is a teal color
   strokeWeight(20); // Sets the thickness of the border
   stroke(90); // Sets the border color to black 
-  robot(200, jumpVal); // Calls the robot
+  robot(350, jumpVal); // Calls the robot
   // This if statement makes the robots eyes move back and forth at the start and every other click
   if (page == 0) {
     jumpVal = 400 //This resets its position back to start
     // This section of code makes him go cross-eyed when mouse position X is between 184 & 229
-    if (184 < mouseX && 229 > mouseX && mouseY > 195 && 205 > mouseY) { 
+    if (334 < mouseX && 379 > mouseX && mouseY > 345 && 355 > mouseY) { 
       fill(104, 237, 228);
-      ellipse(160, jumpVal - 200, 50);
-      ellipse(240, jumpVal - 200, 30);
+      ellipse(310, jumpVal - 200, 50);
+      ellipse(390, jumpVal - 200, 30);
       fill(90);
-      ellipse(170, jumpVal - 200, 25);
-      ellipse(230, jumpVal - 200, 10);
-    } else if (175 > mouseX) { // This section makes it look left when the mouse position X is < 134
+      ellipse(320, jumpVal - 200, 25);
+      ellipse(380, jumpVal - 200, 10);
+    } else if (325 > mouseX) { // This section makes it look left when the mouse position X is < 134
       eyeDirection = max(-10, eyeDirection - 1)
-    } else if (225 < mouseX) { // This section makes it look right when the mouse position X is > 255
+    } else if (375 < mouseX) { // This section makes it look right when the mouse position X is > 255
       eyeDirection = min(10, eyeDirection + 1)
     }
   // This makes the robot jump up and down after the mouse is clicked and every other click that proceeds

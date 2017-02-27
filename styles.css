@@ -1,0 +1,35 @@
+body {
+  width: 850px;
+  margin: 40px auto;
+}
+
+h1 { 
+  color: #222222;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 40pt;
+  margin-left: 40px;
+}
+
+h2 {
+  color: #2bcecb;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 30pt;
+  margin-left: 40px;
+}
+
+p {
+  color: #222222;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14pt;
+  margin-left: 80px;
+}
+
+a {
+  color: #5b5b5b;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14pt;
+}
+
+ul {
+  margin-left: 50px;
+}
