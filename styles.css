@@ -14,14 +14,14 @@ h2 {
   color: #2bcecb;
   font-family: 'Work Sans', sans-serif;
   font-size: 30pt;
-  margin-left: 40px;
+  margin-left: 80px;
 }
 
 p {
   color: #222222;
   font-family: 'Raleway', sans-serif;
   font-size: 14pt;
-  margin-left: 80px;
+  margin-left: 120px;
 }
 
 a {
@@ -31,5 +31,5 @@ a {
 }
 
 ul {
-  margin-left: 50px;
+  margin-left: 100px;
 }
