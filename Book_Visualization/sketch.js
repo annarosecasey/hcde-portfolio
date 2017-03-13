@@ -1,5 +1,5 @@
 // Created by Anna Casey
-// Last edited 2.25.17
+//  Last edited 2.25.17
 // This program vizualizes the progress I've made in various books I'm reading and will hopefully encourage me to finish some of them
 
 var table;
@@ -47,11 +47,11 @@ function dots() {
       text(pagesRemain, x, y + 5);
       var names = rows[r].get("book");
     } else {
-      var names = rows[r].get("book");
+      names = rows[r].get("book");
     }
     
     if (mouseIsPressed) {
-      var names = rows[r].get("author");
+      names = rows[r].get("author");
     }
     
     fill(30, 230 - r * 10, r * 5 + 200); // Assigns shades of blue/green to each book based on "r"

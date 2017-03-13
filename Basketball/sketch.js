@@ -47,7 +47,7 @@ function draw() {
   }
     //LeBron Confetti
   if (x == 475 && y == 10) { // If the basketball is in the hoop (475, 10) then the screen will show images of LeBrons face
-    lebronSize = random(5, 400); // This sets the size of the image of Lebrons face to a random number
+    lebronSize = random(1, 400); // This sets the size of the image of Lebrons face to a random number
     image(lebron, random(0, 975), random(0, 675), lebronSize, lebronSize); // This calls the image of LeBron and causes it to appear in random places at random sizes
     fill(255); // Sets the fill color to white
     textSize(45); // Sets the text size to 45

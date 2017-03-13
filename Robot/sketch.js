@@ -3,7 +3,8 @@
 // This robot has moving eyes and jumps up and down
 
 var page = 0
-var eyeDirection = 0
+var eyeDirX = 0
+var eyeDirY = 0
 var jumpVal = 400
 var jumpDir = 2
 
@@ -15,6 +16,10 @@ function setup() {
 //Draws the Robot
 function draw() {
   background(104, 237, 228);// The background is a teal color
+  fill(0);
+  noStroke();
+  text(mouseX, 50, 30, 30, 30);
+  text(mouseY, 100, 30, 30, 30);
   strokeWeight(20); // Sets the thickness of the border
   stroke(90); // Sets the border color to black 
   robot(350, jumpVal); // Calls the robot
@@ -22,20 +27,23 @@ function draw() {
   if (page == 0) {
     jumpVal = 400 //This resets its position back to start
     // This section of code makes him go cross-eyed when mouse position X is between 184 & 229
-    if (334 < mouseX && 379 > mouseX && mouseY > 345 && 355 > mouseY) { 
+    if (316 < mouseX && 386 > mouseX) { 
       fill(104, 237, 228);
       ellipse(310, jumpVal - 200, 50);
       ellipse(390, jumpVal - 200, 30);
       fill(90);
       ellipse(320, jumpVal - 200, 25);
       ellipse(380, jumpVal - 200, 10);
+    } else if (mouseY < 171) {
+    eyeDirY = max(-8, eyeDirY - 1) 
     } else if (325 > mouseX) { // This section makes it look left when the mouse position X is < 134
-      eyeDirection = max(-10, eyeDirection - 1)
+      eyeDirX = max(-10, eyeDirX - 1)
     } else if (375 < mouseX) { // This section makes it look right when the mouse position X is > 255
-      eyeDirection = min(10, eyeDirection + 1)
+      eyeDirX = min(10, eyeDirX + 1)
     }
   // This makes the robot jump up and down after the mouse is clicked and every other click that proceeds
-  } else {
+  } 
+  else {
     jumpVal = jumpDir + jumpVal;
     if (jumpVal > 400 || jumpVal < 280) {
     jumpDir = jumpDir * -1
@@ -81,8 +89,8 @@ function eyes (x, y) {
   ellipse(x - 40, y - 200, 50);
   ellipse(x + 40, y - 200, 30);
   fill(90);
-  ellipse(x + eyeDirection - 40, y - 200, 25);
-  ellipse(x + eyeDirection + 40, y - 200, 10);
+  ellipse(x + eyeDirX - 40, y + eyeDirY - 200, 25);
+  ellipse(x + eyeDirX + 40, y + eyeDirY - 200, 10);
 }
 
 //Creates the legs
