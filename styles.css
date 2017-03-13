@@ -1,27 +1,27 @@
 body {
   width: 850px;
-  margin: 40px auto;
+  margin: 10px auto;
 }
 
 h1 { 
   color: #222222;
   font-family: 'Work Sans', sans-serif;
   font-size: 40pt;
-  margin-left: 40px;
+  margin-left: 20px;
 }
 
 h2 {
   color: #2bcecb;
   font-family: 'Work Sans', sans-serif;
   font-size: 30pt;
-  margin-left: 80px;
+  margin-left: 20px;
 }
 
 p {
   color: #222222;
   font-family: 'Raleway', sans-serif;
   font-size: 14pt;
-  margin-left: 120px;
+  margin-left: 40px;
 }
 
 a {
@@ -31,5 +31,5 @@ a {
 }
 
 ul {
-  margin-left: 100px;
+  margin-left: 20px;
 }
