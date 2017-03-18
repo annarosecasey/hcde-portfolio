@@ -9,7 +9,6 @@ function setup() {
 
 function draw() {
   background(70, 180, 186); // Sets the background color to a shade of teal
-  mousePosition();
   cloudsBack(); // Calls the clouds behind the sun rays
   sunRaysBack(); // Calls the sun rays that fall behind the background hills
   hillsBack(); // Calls the background hills
@@ -19,12 +18,6 @@ function draw() {
   mountainsFront(); // Calls the mountains in the foreground
   hillsFront(); // Calls the hills in the foreground
   islands(); // Calls the islands
-}
-
-function mousePosition() {
-  fill(0); //make text black
-  text("X: " + mouseX, 0, 5, 300, 300); // print x coordinate in upper left corner
-  text("Y: " + mouseY, 0, 20, 300, 300); // print y coordinate in upper left corner, under x coordinate
 }
 
 // Draws the mountains in the foreground
